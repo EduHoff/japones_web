@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+
+:root{
+    --cor0: #daeaf7;
+    --cor1: #4fa5d8;
+    --cor2: #0855b1;
+    --cor3: #010e54;
+    --cor4: #00022b;
+
+    --sombra: rgba(0, 0, 0, 0.836);
+
+    --fonte-padrao: Arial, Helvetica, sans-serif;   
+}
+
+* {
+    margin: 0;
+    margin: 0;
+}
+
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+    
+}
+
+header{
+    background-color: var(--cor2);
+    text-align: center;
+}
+
+header > h1{
+    color: white;
+    text-shadow: 3px 3px 0px var(--sombra);
+    padding: 10px;
+}
+
+nav{
+    background-color: var(--cor3);
+    text-align: center;
+}
+
+nav > a{
+    color: white;
+    text-decoration: none;
+    padding-left: 25px;
+}
+
+nav > a:hover{
+    color: var(--cor1);
+    text-decoration: underline;
+    transition-duration: 0.3s;
+}
+
+nav > a:active{
+    color: white;
+    text-decoration: underline;
+}
+
+main{
+    background-color: white;
+    padding: 20px;
+    height: fit-content;
+    margin: auto;
+    
+}
+
+div#telaAlfabeto{
+    background-color: var(--cor2);
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    border-radius: 60px;
+    
+}
+
+footer{
+    background-color: var(--cor4);
+    color: white;
+}
