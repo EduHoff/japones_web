@@ -6,17 +6,16 @@ numAleatorio = -1 //valor inicial para não acionar o evento
 hiraTela.textContent = '???'
 hiraResp.textContent = ''
 const ConfirmName = document.getElementById('Confirm')
+let Varacertos = 0
+let Varerros = 0
+let Varpercen = 0
 
-
-
-console.log("i-1: " + i)
 
 
 
 if (i == -2) {
     //apenas para ter um momento para poder responder
-    i++ 
-    console.log("i-2: " + i)     
+    i++    
 }
 
 function randomNumberInterval(min, max) {//função que origia todos os números aleatorios
@@ -29,26 +28,31 @@ function randomNumberInterval(min, max) {//função que origia todos os números
 
 function roleta(hira) { //essa função é fundamnetal para tudo acontecer
 
+
+
     
     if (i == 0) { //assim que i seguar ao 0 um novo número será gerado
-        console.log("i-4: " + i)
         numAleatorio = randomNumberInterval(0, 0)
 
-        console.log('random ' + numAleatorio)
     }
 
     if (i == -1) {
         //mostra se sua respota estava certa ou não
         if (hira == '???') {
             hiraResp.textContent = 'acerto'
+            Varacertos++
+            
+
         } else {
             hiraResp.textContent = 'errou'
+            Varerros++
         }
-        console.log("i-3: " + i)
 
+        
         ConfirmName.value = "Próximo"
+        hiraInput.value = ""
         i++
-        hiraInput.value = ""         
+        Varpercen = (Varacertos/(Varacertos + Varerros)*100 ).toFixed(2)   
     }
 
     
@@ -65,22 +69,27 @@ function roleta(hira) { //essa função é fundamnetal para tudo acontecer
             hiraTela.textContent = 'あ'
             hiraResp.textContent = ''
             ConfirmName.value = "Confirmar"
-            
-            ++i
-            console.log(i)
+            i++
+
 
             if (i == 2) {
 
 
                 if (hira == 'a') {
                     hiraResp.textContent = 'acerto'
+                    Varacertos++
+                    
+                    
                 } else {
                     hiraResp.textContent = 'errou'
+                    Varerros++
                 }
 
-                ConfirmName.value = "Próximo"            
+                ConfirmName.value = "Próximo"
+                hiraInput.value = ""            
                 i = 0
-                hiraInput.value = ""
+                Varpercen = (Varacertos/(Varacertos + Varerros)*100 ).toFixed(2)
+                
             }
 
             break;
@@ -89,6 +98,8 @@ function roleta(hira) { //essa função é fundamnetal para tudo acontecer
             break;
     }
 }
+
+
 
 }
 
@@ -107,6 +118,18 @@ btn.addEventListener("click", function (e) {
 
 
     roleta(hira)
+
+    acertos.textContent = Varacertos
+    erros.textContent = Varerros
+    percen.textContent = Varpercen + "%"
+
+
+    console.log("Acertos: " + Varacertos)
+    console.log("Erros: " + Varerros)
+    console.log("%: " + Varpercen)
+
+
+    
 
     
 

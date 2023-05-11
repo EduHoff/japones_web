@@ -79,7 +79,7 @@ main{
 
 div#placar{
     background-color: var(--cor2);
-    width: 400px;
+    width: 300px;
     margin: auto;
     border-radius: 0px 0px 10px 10px;
     
@@ -89,6 +89,27 @@ div#placar{
     border-color: var(--cor4);
     border-width: 3px;
 }
+
+div#placar > p{
+    display: inline;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+div#placar > p#acertos{
+    color: green;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+div#placar > p#erros{
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
 
 div#telaAlfabeto{
     background-color: var(--cor1);
@@ -121,8 +142,6 @@ input#hiraInput{
     padding: 10px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px var(--sombra);
-
-    
 
 }
 
