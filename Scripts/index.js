@@ -5,6 +5,8 @@ numAleatorio = -1 //valor inicial para não acionar o evento
 
 hiraTela.textContent = '???'
 hiraResp.textContent = ''
+const ConfirmName = document.getElementById('Confirm')
+
 
 
 console.log("i-1: " + i)
@@ -17,7 +19,7 @@ if (i == -2) {
     console.log("i-2: " + i)     
 }
 
-function randomNumberInterval(min, max) {
+function randomNumberInterval(min, max) {//função que origia todos os números aleatorios
 
     return Math.floor(Math.random() * (max - min + 1) + min)
 
@@ -25,9 +27,10 @@ function randomNumberInterval(min, max) {
 
 
 
-function roleta(hira) {
+function roleta(hira) { //essa função é fundamnetal para tudo acontecer
 
-    if (i == 0) {
+    
+    if (i == 0) { //assim que i seguar ao 0 um novo número será gerado
         console.log("i-4: " + i)
         numAleatorio = randomNumberInterval(0, 0)
 
@@ -42,7 +45,8 @@ function roleta(hira) {
             hiraResp.textContent = 'errou'
         }
         console.log("i-3: " + i)
-        
+
+        ConfirmName.value = "Próximo"
         i++
         hiraInput.value = ""         
     }
@@ -57,8 +61,10 @@ function roleta(hira) {
         case 0:
             //alert('funciona')
 
+            hiraInput.value = ""   
             hiraTela.textContent = 'あ'
             hiraResp.textContent = ''
+            ConfirmName.value = "Confirmar"
             
             ++i
             console.log(i)
@@ -71,7 +77,8 @@ function roleta(hira) {
                 } else {
                     hiraResp.textContent = 'errou'
                 }
-             
+
+                ConfirmName.value = "Próximo"            
                 i = 0
                 hiraInput.value = ""
             }
@@ -89,17 +96,20 @@ function roleta(hira) {
 
 //função do botão "Confirmar"
 
-const btn = document.querySelector('#hiraConfirm')
+const btn = document.querySelector('#Confirm')
 
 btn.addEventListener("click", function (e) {
 
     e.preventDefault();
 
-    let hira = document.querySelector("#hiraInput").value
+    let hira = document.querySelector("#hiraInput").value.toLowerCase()
+    
+
 
     roleta(hira)
 
+    
 
-    console.log(hira)
+
 
 })
