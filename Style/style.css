@@ -69,7 +69,7 @@ main p{
 main{
     background-color: white;
     padding: 0px 20px 20px 20px;
-    height:100vh;
+    min-height:76.7vh;
     min-width: 300px;
     max-width: 1500px;
     margin: auto;
@@ -85,7 +85,8 @@ div#placar{
     align-items: center;
 
     background-color: var(--cor2);
-    width: 300px;
+    width: 400px;
+    height: 65px;
     margin: auto;
 
     border-radius: 0px 0px 10px 10px;
@@ -137,6 +138,7 @@ div#hiraDisplay{
     display: flex;
     justify-content: center;
     align-items: center;
+
 
 }
 
@@ -190,6 +192,7 @@ input#Confirm{
     border-style: none;
 
     background-color: var(--cor2);
+    box-shadow: 0px 0px 10px var(--sombra);
     color: white;
 
     
