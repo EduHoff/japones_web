@@ -9,6 +9,7 @@ const ConfirmName = document.getElementById('Confirm')
 let Varacertos = 0
 let Varerros = 0
 let Varpercen = 0
+hiraInput.focus()
 
 
 
@@ -97,6 +98,16 @@ function roleta(hira) { //essa função é fundamnetal para tudo acontecer
 
 }
 
+//ao escrever o formulario apenas pressione Enter para envialo
+document.addEventListener("keydown", function(btnDynamic){
+
+    if(btnDynamic.key === "Enter"){
+
+        Confirm.focus()
+        
+    }
+})
+
 
 
 //função do botão "Confirmar"
@@ -105,7 +116,7 @@ const btn = document.querySelector('#Confirm')
 
 btn.addEventListener("click", function (e) {
 
-    e.preventDefault();
+   
 
     let hira = document.querySelector("#hiraInput").value.toLowerCase()
 
@@ -113,19 +124,12 @@ btn.addEventListener("click", function (e) {
 
     roleta(hira)
 
+    hiraInput.focus()
 
-
+//
     acertos.textContent = (Varacertos < 10 ? '0' + Varacertos : Varacertos)
     erros.textContent = (Varerros < 10 ? '0' + Varerros : Varerros)
     percen.textContent = Varpercen + "%"
-
-
-    console.log("Acertos: " + Varacertos)
-    console.log("Erros: " + Varerros)
-    console.log("%: " + Varpercen)
-
-
-
 
 
 
