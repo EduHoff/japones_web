@@ -129,7 +129,7 @@ div#percen{
 
 /* ---------------------------------------------------- */
 
-div#hiraDisplay{
+div#hiraDisplay, div#kataDisplay{
     margin-top: 75px;
     font-size: 50px;
     font-weight: bolder;
@@ -157,7 +157,7 @@ div#telaCaracter{
 }
 
 
-div#hiraRight{
+div#hiraRight, div#kataRight{
     font-size: 20px;
     font-weight: bolder;
     color: white; 
@@ -172,7 +172,7 @@ div#hiraRight{
 
 /* ---------------------------------------------------- */
 
-input#hiraInput{
+input#hiraInput, input#kataInput{
     display: block;
     margin: auto;
     margin-top: 20px;

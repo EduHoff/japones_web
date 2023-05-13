@@ -4,11 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/style.css">
     <link rel="shortcut icon" href="midia/japan.ico" type="image/x-icon">
-    <title>Document</title>
+    <title>Estudando Katakana</title>   
 </head>
 <body>
-    <a href="index.html">Voltar</a>
-    <p style="font-size: 250px;"><a href="https://www.i2symbol.com/cool-letters/katakana" target="_blank">ア</a></p>
+    <header>
+        <h1>Aprendendo japonês</h1>
+    </header>
+
+    <nav>
+        <a href="index.html" target="_self" rel="back">Menu Principal</a>
+        <a href="hiraganaMain.html" target="_self" rel="next">Hiragana</a>
+        <a href="#" rel="next">Saiba mais</a>
+    </nav>
+
+    <main>
+        <div id="placar">
+            <div id="acertos">00</div>
+            <div id="erros">00</div>
+            <div id="percen">00.00%</div>
+        </div>
+        
+        <div id="telaCaracter">
+            <div id="kataDisplay">null</div>
+            <div id="kataRight"></div>
+        </div>
+
+            <input type="text" id="kataInput" placeholder="digite o katakana" maxlength="3">
+            <input type="button" id="Confirm" value="Confirmar">
+            
+
+    </main>
+    <footer>
+        <p>Site criado por Eduardo Hoffmann</p>
+        <a href="https://github.com/EduHoff" target="_blank" rel="external"><img src="midia/github-mark-white.png" alt="Github white logo" class="logo"></a>
+    </footer>
+
+
+    <script src="Scripts/scriptKata.js" defer></script>
+
+
+    
+    
+    
 </body>
 </html>
