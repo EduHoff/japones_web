@@ -77,10 +77,17 @@ main{
     border-radius: 0px 0px 10px 10px;
 }
 
+/* ---------------------------------------------------- */
+
 div#placar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
     background-color: var(--cor2);
     width: 300px;
     margin: auto;
+
     border-radius: 0px 0px 10px 10px;
     
 
@@ -88,52 +95,80 @@ div#placar{
     border-top: none;
     border-color: var(--cor4);
     border-width: 3px;
+    box-shadow: 0px 0px 10px var(--sombra);
+    
 }
 
-div#placar > p{
-    display: inline;
+div#placar div{
+
+    font-size: 30px;
+    font-weight: bold;
+    
+
+    
+}
+
+div#acertos{
+    color: rgb(0, 216, 0);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+div#erros{
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+div#percen{
     color: white;
     font-size: 30px;
     font-weight: bold;
 }
 
-div#placar > p#acertos{
-    color: green;
-    font-size: 30px;
-    font-weight: bold;
+/* ---------------------------------------------------- */
+
+div#hiraDisplay{
+    margin-top: 75px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;   
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-div#placar > p#erros{
-    color: red;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-
-
-div#telaAlfabeto{
+div#telaCaracter{
     background-color: var(--cor1);
-    min-width: 300px;
-    max-width: 1500px;   
+    height: 250px;
+    width: 300px;
     margin: auto;
     margin-top: 30px;
-    height: 250px;
-    width: 250px;
     border-radius: 60px;
 
     border-style: solid;
     border-color: var(--cor4);
     border-width: 9px;
-    
-    
+   
 }
 
-div#telaAlfabeto > p{
-    font-size: 50px;
+
+div#hiraRight{
+    font-size: 20px;
     font-weight: bolder;
-    color: white;   
+    color: white; 
+    margin-top: 30px;  
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
+
 }
+
+/* ---------------------------------------------------- */
 
 input#hiraInput{
     display: block;
@@ -158,9 +193,9 @@ input#Confirm{
     color: white;
 
     
-
-    
 }
+
+/* ---------------------------------------------------- */
 
 .logo{
     padding-top: 10px;
