@@ -58,13 +58,7 @@ nav > a:active{
     text-decoration: underline;
 }
 
-main p{
-    margin: 15px 0px;
-    text-align: justify;
-    text-indent: 30px;
-    font-size: 1em;
-    line-height: 2em;
-}
+
 
 main{
     background-color: white;
@@ -75,6 +69,33 @@ main{
     margin: auto;
     box-shadow: 0px 0px 10px var(--sombra);
     border-radius: 0px 0px 10px 10px;
+}
+
+
+
+main h1{
+    color: var(--cor4);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    font-size: 1.5em;
+    text-indent: 50px;
+    border-radius: 5px;
+    padding: 3px;
+    
+    
+
+}
+
+   
+
+
+main p{
+    margin: 15px 0;
+    text-align: justify;
+    text-indent: 30px ;
+    font-size: 1em;
+    line-height: 1.5em;
+
+    
 }
 
 /* ---------------------------------------------------- */
