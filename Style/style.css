@@ -74,18 +74,46 @@ main{
 
 
 main h1{
-    color: var(--cor4);
+    color: white;
     background-image: linear-gradient(to right, var(--cor1), transparent);
-    font-size: 1.5em;
-    text-indent: 50px;
+    text-shadow:2px 2px 2px var(--sombra);
+    border-style: outset;
+    border-color: white;
+
+
+    font-size: 1.7em;
+    text-indent: 1.2em;
+    line-height: 2em;
     border-radius: 5px;
-    padding: 3px;
     
+}
+
+
+main h2{
+    background-color: var(--cor1);
+    color: white;
+    text-shadow:2px 2px 2px var(--sombra);
+    border-style: outset;
+    border-color: var(--cor1);
+
+
+    font-size: 1.1em;
+    text-indent: 1.2em;
+    line-height: 2em;
+    border-radius: 5px;
     
 
 }
 
-   
+@media screen and (max-width: 520px) {
+    main h1{
+      font-size: 1.3em;   
+    }
+
+    main h2{
+        font-size: 1.03em;
+    }
+  }   
 
 
 main p{
@@ -95,7 +123,6 @@ main p{
     font-size: 1em;
     line-height: 1.5em;
 
-    
 }
 
 /* ---------------------------------------------------- */
