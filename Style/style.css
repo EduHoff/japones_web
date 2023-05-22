@@ -73,6 +73,26 @@ main{
     border-radius: 0px 0px 10px 10px;
 }
 
+main a{
+    color: var(--cor2);
+    background-color: var(--cor0);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+main a:hover{
+    color: var(--cor3);
+    text-decoration: underline;
+}
+
+main strong{
+    color: var(--cor2);   
+    font-weight: bold;
+}
+
+
 
 
 main h1{
