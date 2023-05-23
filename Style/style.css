@@ -295,3 +295,8 @@ footer{
     color: white;
     
 }
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
