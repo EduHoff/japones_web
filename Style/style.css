@@ -76,7 +76,7 @@ main{
     background-color: white;
     padding: 0px 20px 20px 20px;
     min-width: 300px;
-    max-width: 1500px;
+    max-width: 1200px;
     margin: auto;
     box-shadow: 0px 0px 10px var(--sombra);
     border-radius: 0px 0px 10px 10px;
@@ -148,7 +148,7 @@ main h2{
 
 
 main p{
-    margin: 15px 0;
+    margin: 10px 0;
     text-align: justify;
     text-indent: 30px ;
     font-size: 1em;
