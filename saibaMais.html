@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="Style/style.css">
     <link rel="shortcut icon" href="midia/japan.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <h1>Saiba Mais</h1>
@@ -21,30 +23,59 @@
 
     <main>
         <article>
-            <h1>Sistema de Escrita Japonesa</h1>
-            <p>O Sistema de Escrita Japonesa é composto por 3 alfabetos diferentes: <strong>hiragana</strong>, <strong>katakana</strong> e <strong>kanji</strong>. Porém, todos eles se complementam de forma que sejam utilizados ao mesmo tempo, cada um em sua situação específica.</p>
+            <h1>O Sistema de Escrita Japonesa</h1>
+            <p>O sistema de escrita Japonesa é composto por 3 alfabetos diferentes: o <strong>hiragana</strong>, o
+                <strong>katakana</strong> e o <strong>kanji</strong>. Porém, todos eles se complementam de forma que
+                sejam utilizados ao mesmo tempo, cada um em sua situação específica.</p>
             <p>Vejamos, logo abaixo, mais a repspeito a cerca de cada um dos 3 alfabetos.</p>
 
             <h2>O que é o Hiragana?</h2>
-            <p>O hiragana é um sistema de escrita silábico, ou seja, onde cada símbolo, por si só, representa um som. Ele representa todos os sons da língua Japonesa. Portanto, teoricamente é possível escrever tudo em hiragana. É recomendavel começar a estudar por ele.</p>
+            <p>O hiragana é um sistema de escrita <strong>silábico</strong>, ou seja, onde cada símbolo, por si só,
+                representa um som. Ele representa todos os sons da língua Japonesa.Sendo assim, é teoricamente possível
+                escrever tudo em hiragana. É recomendável começar a estudar por ele.</p>
 
             <h2>O que é o Katakana?</h2>
-            <p>texto falando sobre o Katakana</p>
+            <p>O katakana, assim como o hiragana, é um sistema de escrita silábico que possue os exatos mesmo fonemas do
+                hiragana, porém, representados por símbolos diferentes. Ele é utilizado para palavras estrangeiras que
+                foram integradas ao Japão (Ex: café) ou para adaptar a fonética (Ex: nome). É recomendável começar a
+                estudar ele após ter um certo domínio no hiragana.</p>
 
-            <h2>O que é o Kanji</h2>
-            <p>texto falando sobre o Kanji e provavelmente com um link external para saber mais a respeito</p>
+            <h2>O que é o Kanji?</h2>
+            <p>O kanji, diferente do hiragana e katakana, é um sistema de escrita <strong>ideográfico</strong> onde os símbolos não representam um som, e sim uma ideia. Existem milhares de kanji, fato esse que faz muitos desistirem, porém não desista ainda! É recomendável começar a estudar os kanjis assim que tiver praticamente dominado o hiragana, tendo em vista que é com o hiragana que será indicado a forma certa de lê-los. Também é recomendável não tentar "aprender" muitos kanjis em um pequeno espaço de tempo, nativos estudam japonês por anos e mesmo assim não sabem de tudo. Ao invés tentar aprechar as coisas, foque em aprender um pouco de japonês todos os dias.</p>
         </article>
 
         <article>
             <h1>Como Utilizar o Site?</h1>
-            <p>provavelmente aqui vai ser utilizado imagens do própio site</p>
+            <p>Logo abaixo será mostrado um guia visual de como utilizar o site.</p>
+
+            <input type="button" value="Mostrar" id="btnTutorial" onclick="Tutorial()">
+            <div id="imgTutorial" hidden>
+                As imagens vão estar aqui!
+            </div>
+
+            <script>
+                function Tutorial() {
+                    var tutorial = document.getElementById("imgTutorial");
+                    if (tutorial.style.display === "block") {
+             
+                        tutorial.style.display = "none";
+                        btnTutorial.value = "Mostrar"
+                    } else {
+                        tutorial.style.display = "block";
+                        btnTutorial.value = "Esconder"
+                    }
+                }
+            </script>
         </article>
 
     </main>
     <footer>
-        <p><a href="https://github.com/EduHoff/japones_web/blob/main/LICENSE" target="_blank" rel="external">Copyright &#169; 2023 Eduardo Hoffmann do Carmo Silva</a></p>
-        <a href="https://github.com/EduHoff" target="_blank" rel="external"><img src="midia/github-mark-white.png" alt="Github white logo" class="logo"></a>
+        <p><a href="https://github.com/EduHoff/japones_web/blob/main/LICENSE" target="_blank" rel="external">Copyright
+                &#169; 2023 Eduardo Hoffmann do Carmo Silva</a></p>
+        <a href="https://github.com/EduHoff" target="_blank" rel="external"><img src="midia/github-mark-white.png"
+                alt="Github white logo" class="logo"></a>
     </footer>
-    
+
 </body>
+
 </html>

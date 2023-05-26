@@ -156,6 +156,16 @@ main p{
 
 }
 
+input#btnTutorial{
+    display: block;
+    margin: auto;
+    
+    padding: 5px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px var(--sombra);
+}
+
 /* ---------------------------------------------------- */
 
 div#placar{
