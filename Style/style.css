@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 
-:root{
+:root {
     --cor0: #daeaf7;
     --cor1: #4fa5d8;
     --cor2: #0855b1;
     --cor3: #010e54;
     --cor4: #00022b;
     --sombra: rgba(0, 0, 0, 0.425);
-    --fonte-padrao: Arial, Helvetica, sans-serif;   
+    --fonte-padrao: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -17,58 +17,59 @@
     box-sizing: border-box;
 }
 
-body, html{
+body,
+html {
     height: 100%;
     width: 100%;
 }
 
 
-body{
+body {
     display: flex;
     flex-direction: column;
     background-color: var(--cor0);
     font-family: var(--fonte-padrao);
-    
+
 }
 
-header{
+header {
     background-color: var(--cor2);
     text-align: center;
 }
 
-header > h1{
+header>h1 {
     color: white;
     text-shadow: 3px 3px 0px var(--sombra);
     padding: 10px;
 }
 
-nav{
+nav {
     background-color: var(--cor3);
     text-align: center;
     font-size: 20px;
     padding: 5px;
 }
 
-nav > a{
+nav>a {
     color: white;
     text-decoration: none;
     padding: 0px 7px;
 }
 
-nav > a:hover{
+nav>a:hover {
     color: var(--cor1);
     text-decoration: underline;
     transition-duration: 0.3s;
 }
 
-nav > a:active{
+nav>a:active {
     color: white;
     text-decoration: underline;
 }
 
 
 
-main{
+main {
     flex-grow: 1;
     width: 100%;
     background-color: white;
@@ -80,7 +81,7 @@ main{
     border-radius: 0px 0px 10px 10px;
 }
 
-main a{
+main a {
     color: var(--cor2);
     background-color: var(--cor0);
     font-weight: bold;
@@ -89,37 +90,37 @@ main a{
     border-radius: 5px;
 }
 
-main a:hover{
+main a:hover {
     color: var(--cor3);
     text-decoration: underline;
 }
 
-main strong{
-    color: var(--cor2);   
+main strong {
+    color: var(--cor2);
     font-weight: bold;
 }
 
 
 
 
-main h1{
+main h1 {
     color: white;
     background-image: linear-gradient(to right, var(--cor1), transparent);
-    text-shadow:2px 2px 2px var(--sombra);
+    text-shadow: 2px 2px 2px var(--sombra);
     border-style: outset;
     border-color: white;
     font-size: 1.7em;
     text-indent: 1.2em;
     line-height: 2em;
     border-radius: 5px;
-    
+
 }
 
 
-main h2{
+main h2 {
     background-color: var(--cor1);
     color: white;
-    text-shadow:2px 2px 2px var(--sombra);
+    text-shadow: 2px 2px 2px var(--sombra);
     border-style: outset;
     border-color: var(--cor1);
 
@@ -128,22 +129,44 @@ main h2{
     text-indent: 1.2em;
     line-height: 2em;
     border-radius: 5px;
-    
+
 
 }
 
+
+
 @media screen and (max-width: 520px) {
-    main h1{
-      font-size: 1.3em;   
+    main h1 {
+        font-size: 1.3em;
     }
 
-    main h2{
-        font-size: 1.03em;
+    main h2 {
+        font-size: 1em;
     }
-  }   
+}
+
+@media screen and (max-width: 400px) {
 
 
-main p{
+    nav {
+        font-size: 1em;
+    }
+
+    main h1 {
+        font-size: 1em;
+    }
+
+    main h2 {
+        font-size: 1em;
+    }
+
+    footer{
+        font-size: 0.73em;
+    }
+}
+
+
+main p {
     margin: 10px 0;
     text-align: justify;
     text-indent: 1.2em;
@@ -152,12 +175,12 @@ main p{
 
 }
 
-div#imgTutorial p{
+div#imgTutorial p {
     text-align: center;
     margin: 15px 0px;
 }
 
-img{
+div#imgTutorial img {
     display: block;
     margin: auto;
     border-style: solid;
@@ -167,7 +190,7 @@ img{
 }
 
 
-input#btnTutorial{
+input#btnTutorial {
     display: block;
     margin: auto;
     padding: 5px;
@@ -178,7 +201,7 @@ input#btnTutorial{
 
 /* ---------------------------------------------------- */
 
-div#placar{
+div#placar {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -189,38 +212,38 @@ div#placar{
     margin: auto;
 
     border-radius: 0px 0px 10px 10px;
-    
+
 
     border-style: solid;
     border-top: none;
     border-color: var(--cor4);
     border-width: 3px;
     box-shadow: 0px 0px 10px var(--sombra);
-    
+
 }
 
-div#placar div{
+div#placar div {
 
     font-size: 30px;
     font-weight: bold;
-    
 
-    
+
+
 }
 
-div#acertos{
+div#acertos {
     color: rgb(0, 216, 0);
     font-size: 30px;
     font-weight: bold;
 }
 
-div#erros{
+div#erros {
     color: rgb(255, 0, 0);
     font-size: 30px;
     font-weight: bold;
 }
 
-div#percen{
+div#percen {
     color: white;
     font-size: 30px;
     font-weight: bold;
@@ -228,11 +251,12 @@ div#percen{
 
 /* ---------------------------------------------------- */
 
-div#hiraDisplay, div#kataDisplay{
+div#hiraDisplay,
+div#kataDisplay {
     margin-top: 50px;
     font-size: 80px;
     font-weight: bolder;
-    color: white;   
+    color: white;
 
     display: flex;
     justify-content: center;
@@ -241,7 +265,7 @@ div#hiraDisplay, div#kataDisplay{
 
 }
 
-div#telaCaracter{
+div#telaCaracter {
     background-color: var(--cor1);
     height: 250px;
     width: 300px;
@@ -252,26 +276,28 @@ div#telaCaracter{
     border-style: solid;
     border-color: var(--cor4);
     border-width: 9px;
-   
+
 }
 
 
-div#hiraRight, div#kataRight{
+div#hiraRight,
+div#kataRight {
     font-size: 20px;
     font-weight: bolder;
-    color: white; 
-     
+    color: white;
+
 
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 
 }
 
 /* ---------------------------------------------------- */
 
-input#hiraInput, input#kataInput{
+input#hiraInput,
+input#kataInput {
     display: block;
     margin: auto;
     margin-top: 20px;
@@ -281,7 +307,7 @@ input#hiraInput, input#kataInput{
 
 }
 
-input#Confirm{
+input#Confirm {
     display: block;
     margin: auto;
     margin-top: 20px;
@@ -294,10 +320,10 @@ input#Confirm{
     box-shadow: 0px 0px 10px var(--sombra);
     color: white;
 
-    
+
 }
 
-input#BtnSound{
+input#BtnSound {
     display: block;
     margin: auto;
     margin-top: 10px;
@@ -310,22 +336,22 @@ input#BtnSound{
 
 /* ---------------------------------------------------- */
 
-.logo{
+.logo {
     padding-top: 10px;
     width: 50px;
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0px;
     background-color: var(--cor4);
     color: white;
-    
+
 }
 
-footer a{
+footer a {
     color: white;
     text-decoration: none;
 }
