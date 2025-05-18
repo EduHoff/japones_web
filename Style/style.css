@@ -250,8 +250,7 @@ div#percen {
 
 /* ---------------------------------------------------- */
 
-div#hiraDisplay,
-div#kataDisplay {
+div#charDisplay {
     margin-top: 50px;
     font-size: 80px;
     font-weight: bolder;
@@ -264,7 +263,7 @@ div#kataDisplay {
 
 }
 
-div#telaCaracter {
+div#charContainer {
     background-color: var(--cor1);
     height: 250px;
     width: 300px;
@@ -279,8 +278,7 @@ div#telaCaracter {
 }
 
 
-div#hiraRight,
-div#kataRight {
+div#charAnswer {
     font-size: 20px;
     font-weight: bolder;
     color: white;
@@ -295,8 +293,7 @@ div#kataRight {
 
 /* ---------------------------------------------------- */
 
-input#hiraInput,
-input#kataInput {
+input#answerInput {
     display: block;
     margin: auto;
     margin-top: 20px;
@@ -306,7 +303,7 @@ input#kataInput {
 
 }
 
-input#Confirm {
+input#btnControl {
     display: block;
     margin: auto;
     margin-top: 20px;
@@ -322,7 +319,7 @@ input#Confirm {
 
 }
 
-input#BtnSound {
+input#btnSound {
     display: block;
     margin: auto;
     margin-top: 10px;

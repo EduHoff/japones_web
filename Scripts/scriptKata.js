@@ -1,14 +1,14 @@
 ////var global: valores iniciais de vars importantes para o funcionamneto do script
 let i = -2
 numAleatorio = -1
-const ConfirmName = document.getElementById('Confirm')
-const BtnSound = document.getElementById("BtnSound")
-BtnSound.style.visibility = 'hidden'
+const btnControl = document.getElementById('btnControl')
+const btnSound = document.getElementById("btnSound")
+btnSound.style.visibility = 'hidden'
 let Sound
 let Varacertos = 0
 let Varerros = 0
 let Varpercen = 0
-kataInput.focus()
+answerInput.focus()
 
 
 
@@ -39,17 +39,17 @@ function roleta(kata) {
 
     if (i == -1) {//essa parte funciona apenas uma vez
         if (kata == 'a') {
-            kataRight.textContent = 'Certo!'
+            charAnswer.textContent = 'Certo!'
             Varacertos++
         } else {
-            kataRight.textContent = 'Errado! A respota era: a'
+            charAnswer.textContent = 'Errado! A respota era: a'
             Varerros++
         }
 
-        BtnSound.style.visibility = 'visible'
+        btnSound.style.visibility = 'visible'
         Sound = document.getElementById("aSound")
-        ConfirmName.value = "Próximo"
-        kataInput.value = ""
+        btnControl.value = "Próximo"
+        answerInput.value = ""
         i++
         Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
     }
@@ -61,1105 +61,1105 @@ function roleta(kata) {
         //a partir do número aleatório gerado, um hiragana/katana aparecerar na tela junto de outros elementos. É aqui que a maior parte da dinâmica do script ocorre
         switch (numAleatorio) {
             case 0:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ア'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ア'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'a') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: a'
+                        charAnswer.textContent = 'Errado! A respota era: a'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("aSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 1:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'イ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'イ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'i') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: i'
+                        charAnswer.textContent = 'Errado! A respota era: i'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("iSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 2:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ウ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ウ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'u') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: u'
+                        charAnswer.textContent = 'Errado! A respota era: u'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("uSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 3:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'エ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'エ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'e') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: e'
+                        charAnswer.textContent = 'Errado! A respota era: e'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("eSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 4:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'オ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'オ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'o') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: o'
+                        charAnswer.textContent = 'Errado! A respota era: o'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("oSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 5:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'カ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'カ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ka') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ka'
+                        charAnswer.textContent = 'Errado! A respota era: ka'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("kaSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 6:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'キ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'キ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ki') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ki'
+                        charAnswer.textContent = 'Errado! A respota era: ki'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("kiSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 7:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ク'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ク'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ku') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ku'
+                        charAnswer.textContent = 'Errado! A respota era: ku'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("kuSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 8:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ケ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ケ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ke') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ke'
+                        charAnswer.textContent = 'Errado! A respota era: ke'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("keSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 9:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'コ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'コ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ko') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ko'
+                        charAnswer.textContent = 'Errado! A respota era: ko'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("koSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 10:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'サ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'サ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'sa') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: sa'
+                        charAnswer.textContent = 'Errado! A respota era: sa'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("saSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 11:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'シ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'シ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'shi') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: shi'
+                        charAnswer.textContent = 'Errado! A respota era: shi'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("shiSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 12:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ス'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ス'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'su') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: su'
+                        charAnswer.textContent = 'Errado! A respota era: su'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("suSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 13:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'セ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'セ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'se') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: se'
+                        charAnswer.textContent = 'Errado! A respota era: se'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("seSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 14:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ソ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ソ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'so') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: so'
+                        charAnswer.textContent = 'Errado! A respota era: so'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("soSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 15:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'タ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'タ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ta') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ta'
+                        charAnswer.textContent = 'Errado! A respota era: ta'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("taSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 16:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'チ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'チ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'chi') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: chi'
+                        charAnswer.textContent = 'Errado! A respota era: chi'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("chiSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 17:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ツ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ツ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'tsu') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: tsu'
+                        charAnswer.textContent = 'Errado! A respota era: tsu'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("tsuSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 18:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'テ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'テ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'te') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: te'
+                        charAnswer.textContent = 'Errado! A respota era: te'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("teSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 19:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ト'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ト'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'to') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: to'
+                        charAnswer.textContent = 'Errado! A respota era: to'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("toSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 20:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ナ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ナ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'na') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: na'
+                        charAnswer.textContent = 'Errado! A respota era: na'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("naSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 21:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ニ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ニ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ni') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ni'
+                        charAnswer.textContent = 'Errado! A respota era: ni'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("niSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 22:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ヌ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ヌ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'nu') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: nu'
+                        charAnswer.textContent = 'Errado! A respota era: nu'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("nuSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 23:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ネ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ネ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ne') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ne'
+                        charAnswer.textContent = 'Errado! A respota era: ne'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("neSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 24:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ノ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ノ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'no') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: no'
+                        charAnswer.textContent = 'Errado! A respota era: no'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("noSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 25:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ハ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ハ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ha') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ha'
+                        charAnswer.textContent = 'Errado! A respota era: ha'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("haSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 26:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ヒ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ヒ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'hi') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: hi'
+                        charAnswer.textContent = 'Errado! A respota era: hi'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("hiSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 27:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'フ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'フ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'fu') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: fu'
+                        charAnswer.textContent = 'Errado! A respota era: fu'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("fuSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 28:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ヘ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ヘ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'he') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: he'
+                        charAnswer.textContent = 'Errado! A respota era: he'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("heSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 29:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ホ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ホ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ho') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ho'
+                        charAnswer.textContent = 'Errado! A respota era: ho'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("hoSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 30:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'マ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'マ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ma') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ma'
+                        charAnswer.textContent = 'Errado! A respota era: ma'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("maSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 31:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ミ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ミ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'mi') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: mi'
+                        charAnswer.textContent = 'Errado! A respota era: mi'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("miSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 32:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ム'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ム'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'mu') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: mu'
+                        charAnswer.textContent = 'Errado! A respota era: mu'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("muSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 33:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'メ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'メ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'me') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: me'
+                        charAnswer.textContent = 'Errado! A respota era: me'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("meSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 34:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'モ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'モ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'mo') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: mo'
+                        charAnswer.textContent = 'Errado! A respota era: mo'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("moSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 35:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ヤ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ヤ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ya') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ya'
+                        charAnswer.textContent = 'Errado! A respota era: ya'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("yaSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 36:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ユ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ユ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'yu') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: yu'
+                        charAnswer.textContent = 'Errado! A respota era: yu'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("yuSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 37:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ヨ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ヨ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'yo') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: yo'
+                        charAnswer.textContent = 'Errado! A respota era: yo'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("yoSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 38:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ラ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ラ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ra') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ra'
+                        charAnswer.textContent = 'Errado! A respota era: ra'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("raSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 39:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'リ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'リ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ri') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ri'
+                        charAnswer.textContent = 'Errado! A respota era: ri'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("riSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 40:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ル'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ル'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ru') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ru'
+                        charAnswer.textContent = 'Errado! A respota era: ru'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("ruSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 41:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'レ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'レ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 're') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: re'
+                        charAnswer.textContent = 'Errado! A respota era: re'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("reSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 42:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ロ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ロ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'ro') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ro'
+                        charAnswer.textContent = 'Errado! A respota era: ro'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("roSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 43:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ワ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ワ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'wa') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: wa'
+                        charAnswer.textContent = 'Errado! A respota era: wa'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("waSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 44:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ヲ'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ヲ'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'wo') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: wo'
+                        charAnswer.textContent = 'Errado! A respota era: wo'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("woSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
                 break;
             case 45:
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = 'ン'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = 'ン'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == 'n') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: n'
+                        charAnswer.textContent = 'Errado! A respota era: n'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("nSound")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
@@ -1167,25 +1167,25 @@ function roleta(kata) {
 
 
             default://essa parte é só caso venha um número que não esteja entre 0 a 45, o que não vai acontecer
-                BtnSound.style.visibility = 'hidden'
-                kataInput.value = ""
-                kataDisplay.textContent = '???'
-                kataRight.textContent = ''
-                ConfirmName.value = "Confirmar"
+                btnSound.style.visibility = 'hidden'
+                answerInput.value = ""
+                charDisplay.textContent = '???'
+                charAnswer.textContent = ''
+                btnControl.value = "Confirmar"
                 i++
                 if (i == 2) {
                     if (kata == '???') {
-                        kataRight.textContent = 'Certo!'
+                        charAnswer.textContent = 'Certo!'
                         Varacertos++
                     } else {
-                        kataRight.textContent = 'Errado! A respota era: ???'
+                        charAnswer.textContent = 'Errado! A respota era: ???'
                         Varerros++
                     }
 
-                    BtnSound.style.visibility = 'visible'
+                    btnSound.style.visibility = 'visible'
                     Sound = document.getElementById("erro")
-                    ConfirmName.value = "Próximo"
-                    kataInput.value = ""
+                    btnControl.value = "Próximo"
+                    answerInput.value = ""
                     i = 0
                     Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
                 }
@@ -1208,7 +1208,7 @@ function playAudio() {
 document.addEventListener("keydown", function (btnDynamic) {
 
     if (btnDynamic.key === "Enter") {
-        Confirm.focus()
+        btnControl.focus()
 
     }
 })
@@ -1216,15 +1216,15 @@ document.addEventListener("keydown", function (btnDynamic) {
 
 
 //função do botão "Confirmar/Próximo"
-const btn = document.querySelector('#Confirm')
+const btn = document.querySelector('#btnControl')
 
 btn.addEventListener("click", function () {
 
-    let kata = document.querySelector("#kataInput").value.toLowerCase()
+    let kata = document.querySelector("#answerInput").value.toLowerCase()
 
     roleta(kata)
 
-    kataInput.focus()
+    answerInput.focus()
 
 
     acertos.textContent = (Varacertos < 10 ? '0' + Varacertos : Varacertos)

@@ -1,9 +1,16 @@
 import { Character } from "./character.js";
 import { getSelectedMode } from "./characterMode.js";
+import { playSound } from './audioPlayer.js';
 
 const character = new Character();
 const mode = getSelectedMode();
-let teste =  character[mode][3].soundId
+let teste =  character[mode][5].soundId //essa lógica está funcionando :D
+
+
+// alert(teste)
+
+// playSound(character[mode][5].soundId);
+
 
 
 
@@ -48,11 +55,11 @@ let teste =  character[mode][3].soundId
 //apenas elaborando uma ideia para criar classes
 
 function teste2(){
-    BtnSound.style.visibility = 'hidden'
-    hiraInput.value = ""
+    btnSound.style.visibility = 'hidden' 
+    answerInput.value = ""
     hiraDisplay.textContent = 'い'
     hiraRight.textContent = ''
-    ConfirmName.value = "Confirmar"
+    btnControl.value = "Confirmar"
 i++
 if (i == 2) {
 if (hira == 'i') {
@@ -63,10 +70,10 @@ if (hira == 'i') {
     Varerros++
 }
 
-BtnSound.style.visibility = 'visible'
+btnSound.style.visibility = 'visible'
 Sound = document.getElementById(character.katakana[3].soundId)
-ConfirmName.value = "Próximo"
-hiraInput.value = ""
+btnControl.value = "Próximo"
+answerInput.value = ""
 
 Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
 }
@@ -74,11 +81,11 @@ Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
 }
 
 
-BtnSound.style.visibility = 'hidden'
-hiraInput.value = ""
-hiraDisplay.textContent = 'い'
+btnSound.style.visibility = 'hidden'
+answerInput.value = ""
+hiraDisplay.textContent = 'い' //pronto!
 hiraRight.textContent = ''
-ConfirmName.value = "Confirmar"
+btnControl.value = "Confirmar"
 i++
 if (i == 2) {
 if (hira == 'i') {
@@ -89,10 +96,10 @@ if (hira == 'i') {
     Varerros++
 }
 
-BtnSound.style.visibility = 'visible'
-Sound = document.getElementById("iSound")
-ConfirmName.value = "Próximo"
-hiraInput.value = ""
+btnSound.style.visibility = 'visible'
+Sound = document.getElementById("iSound") //pronto!
+btnControl.value = "Próximo"
+answerInput.value = ""
 i = 0
 Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
 }

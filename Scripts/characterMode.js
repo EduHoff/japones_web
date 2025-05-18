@@ -1,12 +1,17 @@
 let selectedMode = '';
 
-document.addEventListener('click', (event) => {
-    const mode = event.target.dataset.mode;
-    selectedMode = mode || '';
-    localStorage.setItem('characterMode', selectedMode);
-});
+const pathname = window.location.pathname;
+
+if (pathname.includes("hiragana.html")) {
+    selectedMode = "hiragana";
+} else if (pathname.includes("katakana.html")) {
+    selectedMode = "katakana";
+} else {
+    selectedMode = "";
+}
+
+localStorage.setItem("characterMode", selectedMode);
 
 export function getSelectedMode() {
     return selectedMode;
 }
-
