@@ -5,122 +5,50 @@ import { randomNumber } from "./randomNumber.js";
 
 const character = new Character();
 const mode = getSelectedMode();
+
+const charDisplay = document.querySelector("#charDisplay");
+const charAnswerDisplay = document.querySelector("#charAnswerDisplay")
+const answerInput = document.querySelector("#answerInput");
 const btnControl = document.querySelector("#btnControl");
-const btnSound = document.querySelector("#btnSound")
+const btnSound = document.querySelector("#btnSound");
+
+let charAnswer = null;
+let sound = null;
 
 
 
+function main(){
+    const aux = randomNumber(0,45);
+    charDisplay.textContent = character[mode][aux].char
+    charAnswer = character[mode][aux].romaji
+    sound = character[mode][aux].soundId
+}
 
-// let teste =  character[mode][5].soundId //essa lógica está funcionando :D
+
+
+window.addEventListener("DOMContentLoaded", ()=>main())
 
 btnControl.addEventListener("click", ()=>{
-    alert(randomNumber(0,45))
+    btnSound.classList.toggle("visible");
+    btnControl.value = btnSound.classList.contains("visible") ? "Próximo" : "Confirmar";
+    charAnswerDisplay.textContent = "";
+   
+
+    if(btnControl.value != "Confirmar"){
+    charAnswerDisplay.textContent = 
+        answerInput.value.toLowerCase() === charAnswer.toLowerCase()
+        ? "Certo!" 
+        : `Errado! A resposta era: ${charAnswer}`;
+  
+        answerInput.value = "";
+    }
+
+    if(btnControl.value === "Confirmar"){
+        main();
+    }
 })
+
 
 btnSound.addEventListener("click", ()=>{
-    alert("tocar áudio legal");
+    playSound(sound);
 })
-
-
-
-
-
-// alert(teste)
-
-// playSound(character[mode][5].soundId);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//apenas elaborando uma ideia para criar classes
-
-function teste2(){
-    btnSound.style.visibility = 'hidden' 
-    answerInput.value = ""
-    hiraDisplay.textContent = 'い'
-    hiraRight.textContent = ''
-    btnControl.value = "Confirmar"
-i++
-if (i == 2) {
-if (hira == 'i') {
-    hiraRight.textContent = 'Certo!'
-    Varacertos++
-} else {
-    hiraRight.textContent = 'Errado! A respota era: i'
-    Varerros++
-}
-
-btnSound.style.visibility = 'visible'
-Sound = document.getElementById(character.katakana[3].soundId)
-btnControl.value = "Próximo"
-answerInput.value = ""
-
-Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
-}
-
-}
-
-
-btnSound.style.visibility = 'hidden'
-answerInput.value = ""
-hiraDisplay.textContent = 'い' //pronto!
-hiraRight.textContent = ''
-btnControl.value = "Confirmar"
-i++
-if (i == 2) {
-if (hira == 'i') {
-    hiraRight.textContent = 'Certo!'
-    Varacertos++
-} else {
-    hiraRight.textContent = 'Errado! A respota era: i'
-    Varerros++
-}
-
-btnSound.style.visibility = 'visible'
-Sound = document.getElementById("iSound") //pronto!
-btnControl.value = "Próximo"
-answerInput.value = ""
-i = 0
-Varpercen = (Varacertos / (Varacertos + Varerros) * 100).toFixed(2)
-}
-
-
-//código principal vai ficar aqui e os outros códigos vão ser importados para aqui
