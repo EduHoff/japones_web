@@ -20,21 +20,21 @@
     </nav>
 
     <main>
-        <div id="placar">
-            <div id="acertos">00</div>
-            <div id="erros">00</div>
-            <div id="percen">00.00%</div>
+        <div id="scoreboard" class="scoreboard">
+            <div id="acertos" class="acertos">00</div>
+            <div id="erros" class="erros">00</div>
+            <div id="percen" class="percen">00.00%</div>
         </div>
         
-        <div id="charContainer">
-            <div id="charDisplay">あ</div>
-            <div id="charAnswer"></div>
+        <div id="charContainer" class="charContainer">
+            <div id="charDisplay" class="charDisplay">あ</div>
+            <div id="charAnswer" class="charAnswer"></div>
         </div>
 
-            <input id="answerInput" type="text"  placeholder="digite o hiragana" maxlength="3">
-            <input id="btnControl" type="button"  value="Confirmar">
+            <input id="answerInput" class="answerInput" type="text"  placeholder="digite o hiragana" maxlength="3">
+            <input id="btnControl" class="btnControl" type="button"  value="Confirmar">
 
-            <input id="btnSound" type="button" value="Ouvir pronúncia" onclick="playAudio()">
+            <input id="btnSound" class="btnSound" type="button" value="Ouvir pronúncia">
             
 
     </main>
@@ -43,7 +43,7 @@
         <a href="https://github.com/EduHoff" target="_blank" rel="external"><img src="midia/github-mark-white.png" alt="Github white logo" class="logo"></a>
     </footer>
 
-    <script src="Scripts/scriptHira.js" defer></script>
+    <!-- <script src="Scripts/scriptHira.js" defer></script> -->
     <script type="module" src="Scripts/main.js"></script>
 </body>
 </html>

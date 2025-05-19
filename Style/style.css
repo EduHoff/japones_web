@@ -174,12 +174,12 @@ main p {
 
 }
 
-div#imgTutorial p {
+.imgTutorialContainer p {
     text-align: center;
     margin: 15px 0px;
 }
 
-div#imgTutorial img {
+.imgTutorialContainer img {
     display: block;
     margin: auto;
     border-style: solid;
@@ -189,7 +189,7 @@ div#imgTutorial img {
 }
 
 
-input#btnTutorial {
+.btnTutorial {
     display: block;
     margin: auto;
     padding: 5px;
@@ -200,7 +200,7 @@ input#btnTutorial {
 
 /* ---------------------------------------------------- */
 
-div#placar {
+.scoreboard {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -221,7 +221,7 @@ div#placar {
 
 }
 
-div#placar div {
+.scoreboard div {
 
     font-size: 30px;
     font-weight: bold;
@@ -250,7 +250,7 @@ div#percen {
 
 /* ---------------------------------------------------- */
 
-div#charDisplay {
+.charDisplay {
     margin-top: 50px;
     font-size: 80px;
     font-weight: bolder;
@@ -263,7 +263,7 @@ div#charDisplay {
 
 }
 
-div#charContainer {
+.charContainer {
     background-color: var(--cor1);
     height: 250px;
     width: 300px;
@@ -278,7 +278,7 @@ div#charContainer {
 }
 
 
-div#charAnswer {
+.charAnswer {
     font-size: 20px;
     font-weight: bolder;
     color: white;
@@ -293,7 +293,7 @@ div#charAnswer {
 
 /* ---------------------------------------------------- */
 
-input#answerInput {
+.answerInput {
     display: block;
     margin: auto;
     margin-top: 20px;
@@ -303,7 +303,7 @@ input#answerInput {
 
 }
 
-input#btnControl {
+.btnControl {
     display: block;
     margin: auto;
     margin-top: 20px;
@@ -319,7 +319,7 @@ input#btnControl {
 
 }
 
-input#btnSound {
+.btnSound {
     display: block;
     margin: auto;
     margin-top: 10px;

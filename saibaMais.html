@@ -46,9 +46,9 @@
             <h1>Como utilizar o site?</h1>
             <p>Segue o guia abaixo para saber como utilizar o site:</p>
 
-            <input type="button" value="Mostrar" id="btnTutorial" onclick="Tutorial()">
+            <input id="btnTutorial" class="btnTutorial" type="button" value="Mostrar">
 
-            <div id="imgTutorial" hidden>
+            <div id="imgTutorialContainer" class="imgTutorialContainer" style="display: none;">
 
                 <p><strong>Etapa 1: selecione uma das opções circuladas em vermelho</strong></p>
 
@@ -75,9 +75,9 @@
                 </picture>
             </div>
 
-            <script>
+            <!-- <script>
                 function Tutorial() {
-                    var tutorial = document.getElementById("imgTutorial");
+                    var tutorial = document.getElementById("imgTutorialContainer");
                     if (tutorial.style.display === "block") {
              
                         tutorial.style.display = "none";
@@ -87,7 +87,7 @@
                         btnTutorial.value = "Esconder"
                     }
                 }
-            </script>
+            </script> -->
         </article>
 
     </main>
@@ -99,5 +99,7 @@
     </footer>
 </body>
 
+    <script src="Scripts/saibaMais.js"></script>
     <script type="module" src="Scripts/main.js"></script>
+    
 </html>

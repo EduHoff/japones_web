@@ -1,10 +1,28 @@
 import { Character } from "./character.js";
 import { getSelectedMode } from "./characterMode.js";
 import { playSound } from './audioPlayer.js';
+import { randomNumber } from "./randomNumber.js";
 
 const character = new Character();
 const mode = getSelectedMode();
-let teste =  character[mode][5].soundId //essa lógica está funcionando :D
+const btnControl = document.querySelector("#btnControl");
+const btnSound = document.querySelector("#btnSound")
+
+
+
+
+// let teste =  character[mode][5].soundId //essa lógica está funcionando :D
+
+btnControl.addEventListener("click", ()=>{
+    alert(randomNumber(0,45))
+})
+
+btnSound.addEventListener("click", ()=>{
+    alert("tocar áudio legal");
+})
+
+
+
 
 
 // alert(teste)

@@ -23,7 +23,6 @@ if (i == -2) {
 //função que gera os números aleatórios
 function randomNumberInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
-
 }
 
 
