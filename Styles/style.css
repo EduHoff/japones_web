@@ -222,27 +222,23 @@ main p {
 }
 
 .scoreboard div {
-
     font-size: 30px;
     font-weight: bold;
-
-
-
 }
 
-div#acertos {
+.numCorrect {
     color: rgb(0, 216, 0);
     font-size: 30px;
     font-weight: bold;
 }
 
-div#erros {
+.numMistakes {
     color: rgb(255, 0, 0);
     font-size: 30px;
     font-weight: bold;
 }
 
-div#percen {
+.accuracy {
     color: white;
     font-size: 30px;
     font-weight: bold;
