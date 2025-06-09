@@ -21,7 +21,7 @@ let sound = null;
 
 
 function main(){
-    answerInput.focus()
+    answerInput.focus();
     const aux = randomNumber(0,45);
     charDisplay.textContent = character[mode][aux].char;
     charAnswer = character[mode][aux].romaji;
@@ -39,6 +39,7 @@ function scoreboardDisplay(){
 }
 
 function loadLastCharacter() {
+    answerInput.focus();
     const savedIndex = localStorage.getItem(`lastIndex${mode}`);
     if (savedIndex !== null) {
         const index = parseInt(savedIndex);
