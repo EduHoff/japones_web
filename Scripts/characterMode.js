@@ -7,7 +7,7 @@ if (pathname.includes("hiragana.html")) {
 } else if (pathname.includes("katakana.html")) {
     selectedMode = "katakana";
 } else {
-    selectedMode = "";
+    selectedMode = null;
 }
 
 localStorage.setItem("characterMode", selectedMode);
