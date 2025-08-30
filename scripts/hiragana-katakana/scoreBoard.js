@@ -1,4 +1,4 @@
-export function scoreboard(point, mode) {
+export function scoreBoard(point, mode) {
     if(localStorage.getItem('selectedMode') != null){
         if (point === 1) {
         const right = parseInt(localStorage.getItem(`right${mode}`) ?? "0") + 1;

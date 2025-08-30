@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="midia/japan.ico" type="image/x-icon">
     <title>Configurações</title>   
 </head>
@@ -21,21 +21,27 @@
     </nav>
 
     <main>
-        <h1 style="color: red;">Página em construção! Volte depois</h1>
+        
 
-        <input id="btnImport" class="btnImport" type="button" value="Importar">
-        <input id="btnExport" class="btnExport" type="button" value="Exportar">
+        <div>
+            <h3>Importar/Exportar dados</h3>
+            <input id="btnImport" class="btnImport" type="button" value="Importar">
+            <input id="btnExport" class="btnExport" type="button" value="Exportar">
+        </div>
 
 
-        <!-- anotações para eu implementar depois:
+        <div>
+            <h3>Categoria (category): </h3>
+            <label><input type="checkbox" class="radio" value="1" name="regular" />Regular</label>
+            <label><input type="checkbox" class="radio" value="2" name="modificadores" />Modificadores</label>
+            <label><input type="checkbox" class="radio" value="4" name="conjuncoes" />Conjunções</label>
+        </div>
 
-        criar opção de tema claro ou escuro
-        tornar o estilo, header e footer dinâmico com javascript
-        adicionar os characteres alterados e conjunções
-        encontrar áudios para essas duas novas opções
-        torna os áudios uma opção para wav
-
-        obs.: provavelmente vou tornar os valores: 1 padrão, 2 alterado e 4 para conjunção para ter o padrão parecido com chmod do linux, ou não? De qualquer forma, baseado nas opções escolhidas pelo usuário. Vai haver um sorteio para o tipo da categoria (1 a 3) e depois um outro sorteio para os characteres em si. Isso deve evitar o problema de poder selecionar o tipo de charactere. Vou muito provavelmente usar data- para isso. Bom, comentário feito para depois. -->
+        <div>
+            <h3>Tema (theme): </h3>
+            <label><input type="checkbox" class="radio" value="1" name="light" />Claro</label>
+            <label><input type="checkbox" class="radio" value="2" name="dark" />Escuro</label>
+        </div>
 
     </main>
     <footer>
@@ -43,7 +49,7 @@
         <a href="https://github.com/EduHoff" target="_blank" rel="external"><img src="midia/github-mark-white.png" alt="Github white logo" class="logo"></a>
     </footer>
 
-    <script type="module" src="Scripts/characterMode.js"></script>
-    <script type="module" src="Scripts/saveData.js"></script>
+    <script type="module" src="scripts/config/saveData.js"></script>
+    <script type="module" src="scripts/config/characterMode.js"></script>
 </body>
 </html>
