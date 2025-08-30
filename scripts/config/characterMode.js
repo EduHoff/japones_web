@@ -1,17 +1,17 @@
-let selectedMode = '';
+let selectedMode = ''
 
-const pathname = window.location.pathname;
+const pathname = window.location.pathname
 
 if (pathname.includes("hiragana.html")) {
-    selectedMode = "hiragana";
+    selectedMode = "hiragana"
 } else if (pathname.includes("katakana.html")) {
-    selectedMode = "katakana";
+    selectedMode = "katakana"
 } else {
-    selectedMode = null;
+    selectedMode = null
 }
 
-localStorage.setItem("characterMode", selectedMode);
+localStorage.setItem("characterMode", selectedMode)
 
 export function getSelectedMode() {
-    return selectedMode;
+    return selectedMode
 }

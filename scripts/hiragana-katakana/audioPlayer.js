@@ -1,10 +1,10 @@
-const audioCache = {};
+const audioCache = {}
 
 export function playSound(soundId) {
-    if (!soundId) return;
+    if (!soundId) return
 
     if (!audioCache[soundId]) {
-        const audio = new Audio(`../midia/audios/mp3/${soundId}.mp3`);
+        const audio = new Audio(`../midia/audios/mp3/${soundId}.mp3`)
 
         audio.addEventListener('error', () => {
             audio.src = `../midia/audios/ogg/${soundId}.ogg`;
@@ -14,10 +14,10 @@ export function playSound(soundId) {
             });
         });
 
-        audioCache[soundId] = audio;
+        audioCache[soundId] = audio
     }
 
-    const audio = audioCache[soundId];
-    audio.currentTime = 0;
-    audio.play().catch(() => {});
+    const audio = audioCache[soundId]
+    audio.currentTime = 0
+    audio.play().catch(() => {})
 }

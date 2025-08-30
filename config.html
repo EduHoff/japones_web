@@ -30,17 +30,17 @@
         </div>
 
 
-        <div>
+        <div class="category" id="category">
             <h3>Categoria (category): </h3>
-            <label><input type="checkbox" class="radio" value="1" name="regular" />Regular</label>
-            <label><input type="checkbox" class="radio" value="2" name="modificadores" />Modificadores</label>
-            <label><input type="checkbox" class="radio" value="4" name="conjuncoes" />Conjunções</label>
+            <label><input type="checkbox" class="chkCategory chkRegular" id="chkRegular" value="1" name="category"/>Regular</label>
+            <label><input type="checkbox" class="chkCategory chkModification" id="chkModification" value="2" name="category"/>Modificadores</label>
+            <label><input type="checkbox" class="chkCategory chkConjunction" id="chkConjunction" value="4" name="category"/>Conjunções</label>
         </div>
 
         <div>
             <h3>Tema (theme): </h3>
-            <label><input type="checkbox" class="radio" value="1" name="light" />Claro</label>
-            <label><input type="checkbox" class="radio" value="2" name="dark" />Escuro</label>
+            <label><input type="radio" class="rbTheme" value="1" name="theme" />Claro</label>
+            <label><input type="radio" class="rbTheme" value="2" name="theme" />Escuro</label>
         </div>
 
     </main>
@@ -50,6 +50,7 @@
     </footer>
 
     <script type="module" src="scripts/config/saveData.js"></script>
+    <script type="module" src="scripts/config/config.js"></script>
     <script type="module" src="scripts/config/characterMode.js"></script>
 </body>
 </html>

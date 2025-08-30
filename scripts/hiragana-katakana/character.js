@@ -55,7 +55,84 @@ export class Character {
 
             { char: 'わ', romaji: 'wa', soundId: 'waSound' },
             { char: 'を', romaji: 'wo', soundId: 'woSound' },
-            { char: 'ん', romaji: 'n', soundId: 'nSound' },   
+            { char: 'ん', romaji: 'n', soundId: 'nSound' },
+            
+            
+            { char: 'が', romaji: 'ga', soundId: 'gaSound' },
+            { char: 'ぎ', romaji: 'gi', soundId: 'giSound' },
+            { char: 'ぐ', romaji: 'gu', soundId: 'guSound' },
+            { char: 'げ', romaji: 'ge', soundId: 'geSound' },
+            { char: 'ご', romaji: 'go', soundId: 'goSound' },
+
+            { char: 'ざ', romaji: 'za', soundId: 'zaSound' },
+            { char: 'じ', romaji: 'ji', soundId: 'jiSound' },
+            { char: 'ず', romaji: 'zu', soundId: 'zuSound' },
+            { char: 'ぜ', romaji: 'ze', soundId: 'zeSound' },
+            { char: 'ぞ', romaji: 'zo', soundId: 'zoSound' },
+
+            { char: 'だ', romaji: 'da', soundId: 'daSound' },
+            { char: 'ぢ', romaji: 'ji', soundId: 'jiSound' },
+            { char: 'づ', romaji: 'zu', soundId: 'zuSound' },
+            { char: 'で', romaji: 'de', soundId: 'deSound' },
+            { char: 'ど', romaji: 'do', soundId: 'doSound' },
+
+            { char: 'ば', romaji: 'ba', soundId: 'baSound' },
+            { char: 'び', romaji: 'bi', soundId: 'biSound' },
+            { char: 'ぶ', romaji: 'bu', soundId: 'buSound' },
+            { char: 'べ', romaji: 'be', soundId: 'beSound' },
+            { char: 'ぼ', romaji: 'bo', soundId: 'boSound' },
+
+            { char: 'ぱ', romaji: 'pa', soundId: 'paSound' },
+            { char: 'ぴ', romaji: 'pi', soundId: 'piSound' },
+            { char: 'ぷ', romaji: 'pu', soundId: 'puSound' },
+            { char: 'ぺ', romaji: 'pe', soundId: 'peSound' },
+            { char: 'ぽ', romaji: 'po', soundId: 'poSound' },
+
+
+            { char: 'きゃ', romaji: 'kya', soundId: 'kyaSound' },
+            { char: 'きゅ', romaji: 'kyu', soundId: 'kyuSound' },
+            { char: 'きょ', romaji: 'kyo', soundId: 'kyoSound' },
+
+            { char: 'しゃ', romaji: 'sha', soundId: 'shaSound' },
+            { char: 'しゅ', romaji: 'shu', soundId: 'shuSound' },
+            { char: 'しょ', romaji: 'sho', soundId: 'shoSound' },
+
+            { char: 'ちゃ', romaji: 'cha', soundId: 'chaSound' },
+            { char: 'ちゅ', romaji: 'chu', soundId: 'chuSound' },
+            { char: 'ちょ', romaji: 'cho', soundId: 'choSound' },
+
+            { char: 'にゃ', romaji: 'nya', soundId: 'nyaSound' },
+            { char: 'にゅ', romaji: 'nyu', soundId: 'nyuSound' },
+            { char: 'にょ', romaji: 'nyo', soundId: 'nyoSound' },
+
+            { char: 'ひゃ', romaji: 'hya', soundId: 'hyaSound' },
+            { char: 'ひゅ', romaji: 'hyu', soundId: 'hyuSound' },
+            { char: 'ひょ', romaji: 'hyo', soundId: 'hyoSound' },
+
+            { char: 'みゃ', romaji: 'mya', soundId: 'myaSound' },
+            { char: 'みゅ', romaji: 'myu', soundId: 'myuSound' },
+            { char: 'みょ', romaji: 'myo', soundId: 'myoSound' },
+
+            { char: 'りゃ', romaji: 'rya', soundId: 'ryaSound' },
+            { char: 'りゅ', romaji: 'ryu', soundId: 'ryuSound' },
+            { char: 'りょ', romaji: 'ryo', soundId: 'ryoSound' },
+
+            
+            { char: 'ぎゃ', romaji: 'gya', soundId: 'gyaSound' },
+            { char: 'ぎゅ', romaji: 'gyu', soundId: 'gyuSound' },
+            { char: 'ぎょ', romaji: 'gyo', soundId: 'gyoSound' },
+
+            { char: 'じゃ', romaji: 'ja', soundId: 'jaSound' },
+            { char: 'じゅ', romaji: 'ju', soundId: 'juSound' },
+            { char: 'じょ', romaji: 'jo', soundId: 'joSound' },
+
+            { char: 'びゃ', romaji: 'bya', soundId: 'byaSound' },
+            { char: 'びゅ', romaji: 'byu', soundId: 'byuSound' },
+            { char: 'びょ', romaji: 'byo', soundId: 'byoSound' },
+
+            { char: 'ぴゃ', romaji: 'pya', soundId: 'pyaSound' },
+            { char: 'ぴゅ', romaji: 'pyu', soundId: 'pyuSound' },
+            { char: 'ぴょ', romaji: 'pyo', soundId: 'pyoSound' }
         ];
 
 
@@ -115,6 +192,83 @@ export class Character {
             { char: 'ワ', romaji: 'wa', soundId: 'waSound' },
             { char: 'ヲ', romaji: 'wo', soundId: 'woSound' },
             { char: 'ン', romaji: 'n', soundId: 'nSound' },
+
+
+            { char: 'ガ', romaji: 'ga', soundId: 'gaSound' },
+            { char: 'ギ', romaji: 'gi', soundId: 'giSound' },
+            { char: 'グ', romaji: 'gu', soundId: 'guSound' },
+            { char: 'ゲ', romaji: 'ge', soundId: 'geSound' },
+            { char: 'ゴ', romaji: 'go', soundId: 'goSound' },
+
+            { char: 'ザ', romaji: 'za', soundId: 'zaSound' },
+            { char: 'ジ', romaji: 'ji', soundId: 'jiSound' },
+            { char: 'ズ', romaji: 'zu', soundId: 'zuSound' },
+            { char: 'ゼ', romaji: 'ze', soundId: 'zeSound' },
+            { char: 'ゾ', romaji: 'zo', soundId: 'zoSound' },
+
+            { char: 'ダ', romaji: 'da', soundId: 'daSound' },
+            { char: 'ヂ', romaji: 'ji', soundId: 'jiSound' },
+            { char: 'ヅ', romaji: 'zu', soundId: 'zuSound' },
+            { char: 'デ', romaji: 'de', soundId: 'deSound' },
+            { char: 'ド', romaji: 'do', soundId: 'doSound' },
+
+            { char: 'バ', romaji: 'ba', soundId: 'baSound' },
+            { char: 'ビ', romaji: 'bi', soundId: 'biSound' },
+            { char: 'ブ', romaji: 'bu', soundId: 'buSound' },
+            { char: 'ベ', romaji: 'be', soundId: 'beSound' },
+            { char: 'ボ', romaji: 'bo', soundId: 'boSound' },
+
+            { char: 'パ', romaji: 'pa', soundId: 'paSound' },
+            { char: 'ピ', romaji: 'pi', soundId: 'piSound' },
+            { char: 'プ', romaji: 'pu', soundId: 'puSound' },
+            { char: 'ペ', romaji: 'pe', soundId: 'peSound' },
+            { char: 'ポ', romaji: 'po', soundId: 'poSound' },
+
+
+            { char: 'キャ', romaji: 'kya', soundId: 'kyaSound' },
+            { char: 'キュ', romaji: 'kyu', soundId: 'kyuSound' },
+            { char: 'キョ', romaji: 'kyo', soundId: 'kyoSound' },
+
+            { char: 'シャ', romaji: 'sha', soundId: 'shaSound' },
+            { char: 'シュ', romaji: 'shu', soundId: 'shuSound' },
+            { char: 'ショ', romaji: 'sho', soundId: 'shoSound' },
+
+            { char: 'チャ', romaji: 'cha', soundId: 'chaSound' },
+            { char: 'チュ', romaji: 'chu', soundId: 'chuSound' },
+            { char: 'チョ', romaji: 'cho', soundId: 'choSound' },
+
+            { char: 'ニャ', romaji: 'nya', soundId: 'nyaSound' },
+            { char: 'ニュ', romaji: 'nyu', soundId: 'nyuSound' },
+            { char: 'ニョ', romaji: 'nyo', soundId: 'nyoSound' },
+
+            { char: 'ヒャ', romaji: 'hya', soundId: 'hyaSound' },
+            { char: 'ヒュ', romaji: 'hyu', soundId: 'hyuSound' },
+            { char: 'ヒョ', romaji: 'hyo', soundId: 'hyoSound' },
+
+            { char: 'ミャ', romaji: 'mya', soundId: 'myaSound' },
+            { char: 'ミュ', romaji: 'myu', soundId: 'myuSound' },
+            { char: 'ミョ', romaji: 'myo', soundId: 'myoSound' },
+
+            { char: 'リャ', romaji: 'rya', soundId: 'ryaSound' },
+            { char: 'リュ', romaji: 'ryu', soundId: 'ryuSound' },
+            { char: 'リョ', romaji: 'ryo', soundId: 'ryoSound' },
+
+
+            { char: 'ギャ', romaji: 'gya', soundId: 'gyaSound' },
+            { char: 'ギュ', romaji: 'gyu', soundId: 'gyuSound' },
+            { char: 'ギョ', romaji: 'gyo', soundId: 'gyoSound' },
+
+            { char: 'ジャ', romaji: 'ja', soundId: 'jaSound' },
+            { char: 'ジュ', romaji: 'ju', soundId: 'juSound' },
+            { char: 'ジョ', romaji: 'jo', soundId: 'joSound' },
+
+            { char: 'ビャ', romaji: 'bya', soundId: 'byaSound' },
+            { char: 'ビュ', romaji: 'byu', soundId: 'byuSound' },
+            { char: 'ビョ', romaji: 'byo', soundId: 'byoSound' },
+
+            { char: 'ピャ', romaji: 'pya', soundId: 'pyaSound' },
+            { char: 'ピュ', romaji: 'pyu', soundId: 'pyuSound' },
+            { char: 'ピョ', romaji: 'pyo', soundId: 'pyoSound' }
         ];
     }
 }

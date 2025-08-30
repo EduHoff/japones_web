@@ -9,7 +9,8 @@ const allowedKeys = [
     "righthiragana", 
     "rightkatakana",
     "wronghiragana", 
-    "wrongkatakana"
+    "wrongkatakana",
+    "category"
 ];
 
 

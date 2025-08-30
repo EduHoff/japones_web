@@ -22,7 +22,7 @@ let sound = null
 
 function main(){
     answerInput.focus()
-    const aux = randomNumber(0,45)
+    const aux = randomNumber()
     charDisplay.textContent = character[mode][aux].char
     charAnswer = character[mode][aux].romaji
     sound = character[mode][aux].soundId
@@ -65,6 +65,8 @@ window.addEventListener("DOMContentLoaded", ()=>{
 })
 
 btnControl.addEventListener("click", ()=>{
+
+    
     btnSound.classList.toggle("visible")
     btnControl.value = btnSound.classList.contains("visible") ? "Próximo" : "Confirmar"
     charAnswerDisplay.textContent = ""
