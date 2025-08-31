@@ -10,8 +10,9 @@ const allowedKeys = [
     "rightkatakana",
     "wronghiragana", 
     "wrongkatakana",
-    "category"
-];
+    "category",
+    "theme"
+]
 
 
 btnImport.addEventListener("click", (e)=>{    
@@ -21,10 +22,10 @@ btnImport.addEventListener("click", (e)=>{
     input.click()
 
     input.addEventListener("change", () => {
-        const file = input.files[0];
-        if (!file) return;
+        const file = input.files[0]
+        if (!file) return
 
-        const reader = new FileReader();
+        const reader = new FileReader()
         reader.onload = (e) => {
             try {
                 const data = JSON.parse(e.target.result)
@@ -33,15 +34,15 @@ btnImport.addEventListener("click", (e)=>{
 
                 allowedKeys.forEach(key => {
                     if (key in data) {
-                        localStorage.setItem(key, data[key]);
+                        localStorage.setItem(key, data[key])
                     }
-                });
+                })
 
             } catch (ex) {
-                alert("Erro ao importar: " + ex.message);
+                alert("Erro ao importar: " + ex.message)
             }
         }
-        reader.readAsText(file);
+        reader.readAsText(file)
     })
     
 })

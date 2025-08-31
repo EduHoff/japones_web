@@ -133,7 +133,7 @@ export class Character {
             { char: 'ぴゃ', romaji: 'pya', soundId: 'pyaSound' },
             { char: 'ぴゅ', romaji: 'pyu', soundId: 'pyuSound' },
             { char: 'ぴょ', romaji: 'pyo', soundId: 'pyoSound' }
-        ];
+        ]
 
 
         this.katakana = [
@@ -269,6 +269,6 @@ export class Character {
             { char: 'ピャ', romaji: 'pya', soundId: 'pyaSound' },
             { char: 'ピュ', romaji: 'pyu', soundId: 'pyuSound' },
             { char: 'ピョ', romaji: 'pyo', soundId: 'pyoSound' }
-        ];
+        ]
     }
 }

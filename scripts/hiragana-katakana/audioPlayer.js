@@ -7,12 +7,12 @@ export function playSound(soundId) {
         const audio = new Audio(`../midia/audios/mp3/${soundId}.mp3`)
 
         audio.addEventListener('error', () => {
-            audio.src = `../midia/audios/ogg/${soundId}.ogg`;
+            audio.src = `../midia/audios/ogg/${soundId}.ogg`
             audio.play().catch(() => {
-                // audio.src = `../midia/audios/wav/${soundId}.wav`;
-                // audio.play().catch(() => {});
-            });
-        });
+                // audio.src = `../midia/audios/wav/${soundId}.wav`
+                // audio.play().catch(() => {})
+            })
+        })
 
         audioCache[soundId] = audio
     }

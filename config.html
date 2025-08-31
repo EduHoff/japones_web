@@ -21,9 +21,8 @@
     </nav>
 
     <main>
-        
 
-        <div>
+        <div class="saveData" id="saveData">
             <h3>Importar/Exportar dados</h3>
             <input id="btnImport" class="btnImport" type="button" value="Importar">
             <input id="btnExport" class="btnExport" type="button" value="Exportar">
@@ -31,16 +30,16 @@
 
 
         <div class="category" id="category">
-            <h3>Categoria (category): </h3>
+            <h3>Categoria:</h3>
             <label><input type="checkbox" class="chkCategory chkRegular" id="chkRegular" value="1" name="category"/>Regular</label>
             <label><input type="checkbox" class="chkCategory chkModification" id="chkModification" value="2" name="category"/>Modificadores</label>
             <label><input type="checkbox" class="chkCategory chkConjunction" id="chkConjunction" value="4" name="category"/>Conjunções</label>
         </div>
 
-        <div>
-            <h3>Tema (theme): </h3>
-            <label><input type="radio" class="rbTheme" value="1" name="theme" />Claro</label>
-            <label><input type="radio" class="rbTheme" value="2" name="theme" />Escuro</label>
+        <div class="theme" id="theme">
+            <h3>Tema:</h3>
+            <label><input type="radio" class="rbTheme rbThemeLight" id="rbThemeLight" value="0" name="theme" />Claro</label>
+            <label><input type="radio" class="rbTheme rbThemeDark" id="rbThemeDark" value="1" name="theme" />Escuro</label>
         </div>
 
     </main>

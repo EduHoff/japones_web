@@ -1,4 +1,4 @@
-let selectedMode = ''
+let selectedMode = null
 
 const pathname = window.location.pathname
 

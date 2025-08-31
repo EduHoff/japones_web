@@ -1,8 +1,8 @@
-const checkboxes = document.querySelectorAll('.chkCategory');
 
 window.addEventListener("change", () => {
     //CATEGORY
-    const dados_category = Array.from(checkboxes)
+    const chkCategory = document.querySelectorAll('.chkCategory')
+    const dados_category = Array.from(chkCategory)
         .filter(chk =>  chk.checked)    
         .map(chk => Number(chk.value))         
 
@@ -12,12 +12,20 @@ window.addEventListener("change", () => {
     })
 
     localStorage.setItem("category", category.toString())
+
+
+    //THEME
+    const rbTheme = document.querySelector('.rbTheme:checked').value
+    localStorage.setItem("theme", rbTheme.toString())
 })
 
 window.addEventListener("DOMContentLoaded", () => {
     const chkRegular = document.querySelector('#chkRegular')
     const chkModification = document.querySelector('#chkModification')
     const chkConjunction = document.querySelector('#chkConjunction')
+
+    const rbThemeLight = document.querySelector('#rbThemeLight')
+    const rbThemeDark = document.querySelector('#rbThemeDark')
 
 
     //CATEGORY
@@ -49,9 +57,26 @@ window.addEventListener("DOMContentLoaded", () => {
             chkConjunction.setAttribute('checked', 'true')
             break
         default:
+            localStorage.setItem("category", "1")
             chkRegular.setAttribute('checked', 'true')
             break
         
+    }
+
+
+    //THEME
+    switch(Number(localStorage.getItem("theme"))){
+        case 0:
+            rbThemeLight.setAttribute('checked', 'true')
+            break      
+        case 1:
+            rbThemeDark.setAttribute('checked', 'true')
+            break
+        default:
+            localStorage.setItem("theme", "0")
+            rbThemeLight.setAttribute('checked', 'true')
+            break
+
     }
 
 })
