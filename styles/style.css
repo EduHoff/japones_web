@@ -8,18 +8,22 @@
     --cor2: #0855b1;
     --cor3: #010e54;
     --cor4: #00022b;
+    --fundo: #fff;
+    --texto: #000;
     --sombra: rgba(0, 0, 0, 0.425);
     --fonte-padrao: Arial, Helvetica, sans-serif;
 }
 
-.darkTheme { /*não, isso não vai ser o tema escuro oficial. Por favor! Isso é apenas para testar o script
+.darkTheme {
     /* Tema escuro */
-    --cor0: #121212;
-    --cor1: #1e1e1e;
-    --cor2: #3d3d3d;
-    --cor3: #5a5a5a;
-    --cor4: red;
-    --sombra: rgba(255, 255, 255, 0.2);
+    --cor0: #000;
+    --cor1: #4fa5d8;
+    --cor2: #0855b1;
+    --cor3: #010e54;
+    --cor4: #00022b;
+    --fundo: #101324;
+    --texto: #fff;
+    --sombra: rgba(0, 0, 0, 0.425);
 }
 
 * {
@@ -39,6 +43,7 @@ body {
     flex-direction: column;
     background-color: var(--cor0);
     font-family: var(--fonte-padrao);
+    color: var(--texto);
 
 }
 
@@ -82,7 +87,7 @@ nav>a:active {
 main {
     flex-grow: 1;
     width: 100%;
-    background-color: white;
+    background-color: var(--fundo);
     padding: 0px 20px 20px 20px;
     min-width: 300px;
     max-width: 1200px;
@@ -123,7 +128,6 @@ main h1 {
     text-indent: 1.2em;
     line-height: 2em;
     border-radius: 5px;
-
 }
 
 
